@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Expense Reimbursement</title>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="page-shell">
+    <h1>Expense Reimbursement</h1>
+    <p>Submit one business expense for reimbursement.</p>
+    </div>
+  </header>
+
+  <main class="page-shell">
+
+    <section>
+      <h2>Before You Submit</h2>
+      <p>
+        Complete the required fields below.
+        Keep your receipt available when company policy requires one.
+      </p>
+    </section>
+
+    <section>
+      <h2>Expense Details</h2>
+
+      <form method="get">
+
+        <fieldset>
+
+          <legend>Expense Information</legend>
+
+          
+          <label for="employeeId">Employee ID</label>
+        
+          <input
+            id="employeeId"
+            name="employeeId"
+            type="text"
+            required
+          >
+         
+          <br><br>
+
+          <label for="expenseDate">Expense Date</label>
+
+          <input
+            id="expenseDate"
+            name="expenseDate"
+            type="date"
+            required
+          >
+
+          <br><br>
+
+          <label for="category">Category</label>
+
+          <select
+            id="category"
+            name="category"
+            required
+          >
+            <option value="">Choose a category</option>
+            <option value="travel">Travel</option>
+            <option value="meals">Meals</option>
+            <option value="supplies">Supplies</option>
+            <option value="other">Other</option>
+          </select>
+
+          <br><br>
+
+          <label for="amount">Expense Amount ($)</label>
+
+          <input
+            id="amount"
+            name="amount"
+            type="number"
+            required
+            min="0.01"
+            step="0.01"
+          >
+
+          <br><br>
+
+          <label for="description">Business Purpose / Description</label>
+          <br>
+
+          <textarea
+            id="description"
+            name="description"
+            rows="4"
+            cols="45"
+            required
+          ></textarea>
+
+          <br><br>
+
+          <div class="checkbox-row">
+         <input type="checkbox" id="receipt" name="receipt">
+         <label for="receipt">Receipt attached</label>
+         </div>
+
+
+        </fieldset>
+
+        <br>
+
+        <button type="submit">
+          Submit Request
+        </button>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>MIS 3371 — Week 4 Live Demo</p>
+  </footer>
+
+</body>
+</html>
